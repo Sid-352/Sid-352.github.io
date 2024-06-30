@@ -1,2 +1,4 @@
 # Sid-352.github.io
-Test website
+A website I made as a frontend to showcase and explain my other projects!
+
+WIP
