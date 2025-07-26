@@ -1,36 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information about Projects</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sid-352 | Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Some Random Projects That I Made</h1>
-        <div class="profile">
-            <a href="https://github.com/Sid-352" target="_blank">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Profile">
+<body class="antialiased">
+
+    <!-- Header & Hero Section -->
+    <header class="container mx-auto px-6 py-16 text-center">
+        <img src="https://github.com/Sid-352.png" alt="Profile Picture" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white">
+            Hi, I'm Sid-352
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            A developer passionate about creating practical tools, automating complex tasks, and exploring the intersection of software and systems. Welcome to my corner of the web.
+        </p>
+        <div class="mt-8">
+            <a href="#projects" class="btn-primary text-white font-semibold py-3 px-6 rounded-lg shadow-lg inline-block">
+                View My Work
             </a>
-            <span>Discord: tech_dude</span>
         </div>
     </header>
-    <main>
-        <section id="project1">
-            <h2>Terraria Server</h2>
-            <p>This project uses Docker to initialize, create, and manage a vanilla Terraria 1.4.x or a tModLoader (Modded Terraria) 1.4.x instance.</p>
-            <a href="https://github.com/Sid-352/Terraria-server" target="_blank">View on GitHub</a>
+
+    <main class="container mx-auto px-6">
+        <!-- About Me Section -->
+        <section id="about" class="py-20 text-center">
+             <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 section-title inline-block pb-2">
+                About Me
+            </h2>
+            <p class="text-gray-300 max-w-3xl mx-auto text-lg">
+                I'm a software developer with a strong interest in backend systems, automation, and creating tools that make life easier. My work often involves bridging different technologies, like connecting a mobile app to a PC with Rhizome, or automating server deployments with Docker. I enjoy the challenge of solving complex problems and am always looking for new ways to apply my skills.
+            </p>
         </section>
-        <section id="project2">
-            <h2>Shell Scripts</h2>
-            <p>This is an assortment of random small-scale projects and code snippets.</p>
-            <a href="https://github.com/Sid-352/Shell-Scripts" target="_blank">View on GitHub</a>
+
+        <!-- Tech Stack Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12 section-title inline-block pb-2">
+                My Tech Stack
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white mb-4">Languages</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">Python</span>
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">Kotlin</span>
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">Node.js</span>
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">Shell/Bash</span>
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">HTML & CSS</span>
+                    </div>
+                </div>
+                 <div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Tools & Platforms</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">Docker</span>
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">Git & GitHub</span>
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">Android</span>
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">WebSockets</span>
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">GitHub Actions</span>
+                        <span class="tech-tag text-lg font-semibold px-4 py-2 rounded-lg">Discord.js</span>
+                    </div>
+                </div>
+            </div>
         </section>
-        <!-- Add more project sections here -->
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12 section-title inline-block pb-2">
+                My Projects
+            </h2>
+            
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: Rhizome -->
+                <div class="project-card glass-effect rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="font-bold text-2xl mb-2 text-white">Rhizome</h3>
+                        <p class="text-gray-300 text-base mb-4">
+                            A powerful Android application to remotely control your PC. Features a trackpad, customizable command grids, and a macro engine to automate workflows efficiently.
+                        </p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://github.com/Sid-352/Rhizome" target="_blank" rel="noopener noreferrer" class="btn-primary text-white font-semibold py-2 px-4 rounded-lg inline-block w-full text-center">
+                            View on GitHub &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Tweet Scraper -->
+                <div class="project-card glass-effect rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="font-bold text-2xl mb-2 text-white">Tweet Scraper & Bot</h3>
+                        <p class="text-gray-300 text-base mb-4">
+                            A Node.js script that scrapes tweets from a specified Twitter handle and automatically posts them to a Discord channel using a webhook, complete with embedded images.
+                        </p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://github.com/Sid-352/Tweet-Scraper" target="_blank" rel="noopener noreferrer" class="btn-primary text-white font-semibold py-2 px-4 rounded-lg inline-block w-full text-center">
+                            View on GitHub &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Terraria Server -->
+                <div class="project-card glass-effect rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="font-bold text-2xl mb-2 text-white">Dockerized Terraria Server</h3>
+                        <p class="text-gray-300 text-base mb-4">
+                            A streamlined setup to deploy a Terraria or tModLoader game server using Docker. Simplifies server management and makes it easy to host a game on any Docker-supported device.
+                        </p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://github.com/Sid-352/Terraria-server" target="_blank" rel="noopener noreferrer" class="btn-primary text-white font-semibold py-2 px-4 rounded-lg inline-block w-full text-center">
+                            View on GitHub &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Shell Scripts -->
+                <div class="project-card glass-effect rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="font-bold text-2xl mb-2 text-white">Shell Scripts Collection</h3>
+                        <p class="text-gray-300 text-base mb-4">
+                            A personal repository of useful shell scripts and command-line tools designed to automate system administration, setup, and various other tasks on Linux systems.
+                        </p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://github.com/Sid-352/Shell-Scripts" target="_blank" rel="noopener noreferrer" class="btn-primary text-white font-semibold py-2 px-4 rounded-lg inline-block w-full text-center">
+                            View on GitHub &rarr;
+                        </a>
+                    </div>
+                </div>
+                 <!-- Project 5: Portfolio Website -->
+                <div class="project-card glass-effect rounded-xl overflow-hidden shadow-lg flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="font-bold text-2xl mb-2 text-white">Portfolio Website</h3>
+                        <p class="text-gray-300 text-base mb-4">
+                            The very website you're looking at. A clean, responsive, single-page portfolio built to showcase my projects and skills, styled with Tailwind CSS.
+                        </p>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://github.com/Sid-352/Sid-352.github.io" target="_blank" rel="noopener noreferrer" class="btn-primary text-white font-semibold py-2 px-4 rounded-lg inline-block w-full text-center">
+                            View on GitHub &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Let's Connect</h3>
+            <p class="text-gray-400 mb-6">Feel free to reach out if you'd like to collaborate or just say hi!</p>
+            <div class="flex justify-center space-x-6">
+                <!-- GitHub Icon -->
+                 <a href="https://github.com/Sid-352" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                </a>
+                <!-- Discord Icon -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4464.8245-.6667 1.2882-2.048-1.604-4.644-1.604-6.692 0-.2203-.4637-.4557-.9129-.6667-1.2882a.0741.0741 0 00-.0785-.0371 19.7913 19.7913 0 00-4.8851 1.5152.069.069 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0825.0825 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8781-1.2982 1.229-2.0112a.0741.0741 0 00-.041-.1064c-.6828-.2656-1.3417-.5623-1.944- .8944a.0741.0741 0 01-.0206-.0571c-.0118-.321-.0104-.6328.0047-.9434a.0741.0741 0 01.0658-.0641c.6544-.2656 1.2982-.4938 1.9234-.6828a.0741.0741 0 01.0887.0064c2.2944 1.5993 4.9414 1.5993 7.2358 0a.0741.0741 0 01.0887-.0064c.6252.189 1.269.4172 1.9234.6828a.0741.0741 0 01.0658.0641c.0151.3106.0165.6224.0047.9434a.0741.0741 0 01-.0206.0571c-.6023.3321-1.2612.6288-1.944.8944a.0741.0741 0 00-.041.1064c.3509.713.7674 1.3808 1.229 2.0112a.0777.0777 0 00.0842.0276c1.9516-.6067 3.9399-1.5218 5.9929-3.0294a.0825.0825 0 00.0312-.0561c.418-4.4779-.4332-8.9808-2.3484-13.6602a.069.069 0 00-.0321-.0277z"/></svg>
+                </a>
+            </div>
+            <p class="mt-8 text-gray-500 text-sm">
+                &copy; 2024 Sid-352. Built with HTML & Tailwind CSS.
+            </p>
+        </div>
     </footer>
+
+    <!-- Custom Script -->
     <script src="script.js"></script>
+
 </body>
 </html>
